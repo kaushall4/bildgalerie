@@ -2,69 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link type="text/css" href="../css/stylesheet.css" rel="stylesheet">
+    <title>Bildergalerie</title>
+    <link type="text/css" href="../static/css/stylesheet.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-<h2 style="text-align:center">Bildergalerie</h2>
-
-<p>Galerie 1:</p>
-<div class="slideshow-container">
-    <div class="mySlides1">
-        <img src="../static/img/cotton.jpg" style="width:25%">
-    </div>
-
-    <div class="mySlides1">
-        <img src="../static/img/Hardware.jpg" style="width:25%">
-    </div>
-
-    <div class="mySlides1">
-        <img src="../static/img/kylie.jpg" style="width:25%">
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+<div class="jumbotron text-center">
+    <h1>Bildergalerie</h1>
+    <p>Resize this responsive page to see the effect!</p>
 </div>
 
-<p>Slideshow 2:</p>
-<div class="slideshow-container">
-    <div class="mySlides2">
-        <img src="../static/koaialkabel.jpg" style="width:25%">
+<div class="row">
+    <div class="column">
+        <img src="../static/img/cotton.jpg" style="width:100%">
+        <img src="../static/img/Hardware.jpg" style="width:100%">
+        <img src="../static/img/koaialkabel.jpg" style="width:100%">
+        <img src="../static/img/kylie.jpg" style="width:100%">
+        <img src="../static/img/Model_Frau.jpg" style="width:100%">
+        <img src="../static/img/kylie.jpg" style="width:100%">
+        <img src="../static/img/pic1.png" style="width:100%">
+    </div>
+    <div class="column">
+        <img src="../static/img/spongebob.jpg" style="width:100%">
+        <img src="../static/img/cotton.jpg" style="width:100%">
+        <img src="../static/img/Hardware.jpg" style="width:100%">
+        <img src="../static/img/kylie.jpg" style="width:100%">
+        <img src="../static/img/Model_Frau.jpg" style="width:100%">
+        <img src="../static/img/spongebob.jpg" style="width:100%">
     </div>
 
-    <div class="mySlides2">
-        <img src="../static/Model_Frau.jpg" style="width:25%">
-    </div>
 
-    <div class="mySlides2">
-        <img src="../static/spongebob.jpg" style="width:25%">
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
 </div>
-<script>
-    let slideIndex = [1,1];
-    let slideId = ["mySlides1", "mySlides2"]
-    showSlides(1, 0);
-    showSlides(1, 1);
 
-    function plusSlides(n, no) {
-        showSlides(slideIndex[no] += n, no);
-    }
 
-    function showSlides(n, no) {
-        let i;
-        let x = document.getElementsByClassName(slideId[no]);
-        if (n > x.length) {slideIndex[no] = 1}
-        if (n < 1) {slideIndex[no] = x.length}
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex[no]-1].style.display = "block";
-    }
-</script>
 
 </body>
 
